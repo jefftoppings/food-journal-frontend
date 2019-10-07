@@ -5,7 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LoginComponent } from "./login/login.component";
-import { MatToolbarModule } from "@angular/material";
+import { MatCardModule, MatToolbarModule } from "@angular/material";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 
@@ -20,7 +20,8 @@ import { FooterComponent } from "./footer/footer.component";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
