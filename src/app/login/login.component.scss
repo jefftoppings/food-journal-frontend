@@ -1,15 +1,14 @@
 .container {
   background: #e9e9e9;
   height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh; // TODO adjust
 
     mat-card {
-      width: 400px;
+      width: 50vw;
 
       .login-title {
         text-align: center;
