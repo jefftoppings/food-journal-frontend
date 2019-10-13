@@ -7,8 +7,15 @@
 
   .content {
 
-    mat-card {
+    .desktop {
       width: 400px;
+    }
+
+    .mobile {
+      width: 300px;
+    }
+
+    mat-card {
       // TODO: responsive styling
 
       .login-title {

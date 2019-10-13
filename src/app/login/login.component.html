@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container">
   <div class="content">
-    <mat-card>
+    <mat-card [class.desktop]="!(isMobile$ | async)" [class.mobile]="isMobile$ | async">
       <mat-card-title class="login-title">Login</mat-card-title>
       <mat-card-content>
         <div  class="login-form-field">
