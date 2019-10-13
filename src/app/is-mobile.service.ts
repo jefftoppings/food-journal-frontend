@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -7,12 +7,15 @@ import { map, shareReplay } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class IsMobileService {
-  isMobile$: Observable<boolean>;
+  isMobile$$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(null);
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.isMobile$ = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+    this.breakpointObserver
+      .observe(Breakpoints.Handset)
+      .pipe(map(result => this.isMobile$$.next(result.matches), shareReplay()));
+  }
+
+  getIsMobile$(): Observable<boolean> {
+    return this.isMobile$$.asObservable();
   }
 }
