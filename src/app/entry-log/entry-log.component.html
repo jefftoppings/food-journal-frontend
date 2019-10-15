@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>Recent Entries</mat-card-title>
+  <mat-card-subtitle>A list of recent recordings</mat-card-subtitle>
+  <mat-card-content>
+    <ul *ngFor="let entry of entries$ | async" class="entries-list">
+      <mat-card>
+        <mat-card-title>{{entry.name}}</mat-card-title>
+        <mat-card-subtitle>{{entry.date.toString()}}</mat-card-subtitle>
+        <mat-card-content>{{entry.comments}}</mat-card-content>
+      </mat-card>
+    </ul>
+  </mat-card-content>
+</mat-card>

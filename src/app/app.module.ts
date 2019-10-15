@@ -9,13 +9,14 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
-  MatInputModule,
+  MatInputModule, MatListModule,
   MatToolbarModule
 } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AddEntryComponent } from './add-entry/add-entry.component';
+import { EntryLogComponent } from './entry-log/entry-log.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AddEntryComponent } from './add-entry/add-entry.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AddEntryComponent
+    AddEntryComponent,
+    EntryLogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { AddEntryComponent } from './add-entry/add-entry.component';
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

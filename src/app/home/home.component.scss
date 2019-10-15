@@ -4,4 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .sub-container * {
+    display: block;
+    padding: 4px;
+  }
 }
