@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>Add Entry</mat-card-title>
+  <mat-card-subtitle>{{currentDate}}</mat-card-subtitle>
+  <mat-card-content>
+    <div>
+      <mat-form-field>
+        <mat-label>Food Item</mat-label>
+        <input #food matInput label="food"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Comments</mat-label>
+        <textarea #comments matInput label="comments"></textarea>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button class="submit-button">Submit</button>
+  </mat-card-actions>
+</mat-card>
